@@ -35,7 +35,7 @@ const UserInput = () => {
         onKeyDown={handleKeyEvent}
       />
       <PaperAirplaneIcon
-        className="w-7 -rotate-45 mr-8 hover:text-blue-600 transition cursor-pointer"
+        className="w-7 -rotate-45 select-none md:mr-8 hover:text-blue-600 transition cursor-pointer"
         onClick={handleSendMessage}
       />
     </div>

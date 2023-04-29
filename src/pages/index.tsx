@@ -11,7 +11,9 @@ const Home = () => {
         <meta name="keywords" content="nextjs, react, web development" />
       </Head>
       <div className="w-screen h-screen flex  overflow-hidden font-sans bg-[#F8F9FA]">
-        <LeftMenu />
+        <div className="hidden md:flex">
+          <LeftMenu />
+        </div>
         <Chat />
       </div>
     </>
