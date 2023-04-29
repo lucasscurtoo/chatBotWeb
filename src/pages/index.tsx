@@ -1,16 +1,20 @@
 import Chat from "@/components/Chat"
-import Header from "@/components/Header"
 import LeftMenu from "@/components/LeftMenu"
+import Head from "next/head"
 
 const Home = () => {
   return (
-    <div className="w-screen h-screen flex  overflow-hidden font-sans bg-[#F8F9FA]">
-      <LeftMenu />
-      <div className="w-full h-full ">
-        <Header />
+    <>
+      <Head>
+        <title>ChatBot</title>
+        <meta name="description" content="My personal to-do project" />
+        <meta name="keywords" content="nextjs, react, web development" />
+      </Head>
+      <div className="w-screen h-screen flex  overflow-hidden font-sans bg-[#F8F9FA]">
+        <LeftMenu />
         <Chat />
       </div>
-    </div>
+    </>
   )
 }
 export default Home

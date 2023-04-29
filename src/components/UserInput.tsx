@@ -1,18 +1,18 @@
 import { useSendMessageMutation } from "@/redux/api"
-import { setUserMessage } from "@/redux/messagesSlice"
+import { addUserMessage } from "@/redux/messagesSlice"
 import { PaperAirplaneIcon } from "@heroicons/react/24/outline"
 import React, { useRef } from "react"
 import { useDispatch } from "react-redux"
 
 const UserInput = () => {
   const userMessageRef = useRef<HTMLInputElement | null>(null)
-  const [sendMessage, { isLoading }] = useSendMessageMutation()
+  const [sendMessage] = useSendMessageMutation()
   const dispatch = useDispatch()
 
   const handleSendMessage = () => {
     if (userMessageRef.current?.value) {
       sendMessage({ userMessage: userMessageRef.current.value })
-      dispatch(setUserMessage(userMessageRef.current.value))
+      dispatch(addUserMessage(userMessageRef.current.value))
       userMessageRef.current.value = ""
     }
   }
@@ -35,7 +35,7 @@ const UserInput = () => {
         onKeyDown={handleKeyEvent}
       />
       <PaperAirplaneIcon
-        className="w-6 -rotate-45 mr-8"
+        className="w-7 -rotate-45 mr-8 hover:text-blue-600 transition cursor-pointer"
         onClick={handleSendMessage}
       />
     </div>
