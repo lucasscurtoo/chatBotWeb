@@ -7,8 +7,11 @@ const Home = () => {
     <>
       <Head>
         <title>ChatBot</title>
-        <meta name="description" content="My personal to-do project" />
-        <meta name="keywords" content="nextjs, react, web development" />
+        <meta
+          name="description"
+          content="My personal chatbot project using langchain"
+        />
+        <meta name="keywords" content="nextjs, react, web development, IA" />
       </Head>
       <div className="w-screen h-screen flex  overflow-hidden font-sans bg-[#F8F9FA]">
         <div className="hidden md:flex">
