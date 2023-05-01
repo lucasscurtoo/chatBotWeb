@@ -1,5 +1,5 @@
-import { useSendMessageMutation } from "@/redux/api"
 import { addUserMessage } from "@/redux/messagesSlice"
+import { useSendMessageMutation } from "@/redux/api"
 import { PaperAirplaneIcon } from "@heroicons/react/24/outline"
 import React, { useRef } from "react"
 import { useDispatch } from "react-redux"
